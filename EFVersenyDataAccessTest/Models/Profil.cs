@@ -12,6 +12,7 @@ namespace EFVersenyDataAccessTest.Models
         [Required]
         [MaxLength(20)]
         public String ProfilNev { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime SzuletesiIdo { get; set; }
         public DateTime RegisztracioIdeje { get; set; }
         [Required]
