@@ -1,0 +1,69 @@
+﻿@model EFVersenyDataAccessTest.Models.Profil
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Profil</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProfilNev)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProfilNev)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SzuletesiIdo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SzuletesiIdo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RegisztracioIdeje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RegisztracioIdeje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VezetekNev)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VezetekNev)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KeresztNev)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KeresztNev)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailCim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EmailCim)
+        </dd>
+        @foreach (var nev in Model.JatekosNevek)
+        {
+            <dt class="col-sm-2">
+                Jatekosnev
+            </dt>
+            <dd class="col-sm-10">
+                @nev.Nev
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

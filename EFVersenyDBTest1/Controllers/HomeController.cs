@@ -1,5 +1,7 @@
-﻿using EFVersenyDBTest1.Models;
+﻿using EFVersenyDataAccessTest.DataAccess;
+using EFVersenyDBTest1.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,8 @@ namespace EFVersenyDBTest1.Controllers
 {
     public class HomeController : Controller
     {
+
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)

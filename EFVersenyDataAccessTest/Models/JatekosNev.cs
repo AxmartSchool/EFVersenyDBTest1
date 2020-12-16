@@ -12,7 +12,8 @@ namespace EFVersenyDataAccessTest.Models
         [MaxLength(50)]
         public string Nev { get; set; }
         public Jatek Jatek { get; set; }
-
+        //Kell a navigation property 
+        public Profil Profil { get; set; }
 
     }
 }

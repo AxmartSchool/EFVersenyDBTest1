@@ -1,0 +1,63 @@
+﻿@model EFVersenyDataAccessTest.Models.Profil
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Profil</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProfilNev" class="control-label"></label>
+                <input asp-for="ProfilNev" class="form-control" />
+                <span asp-validation-for="ProfilNev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SzuletesiIdo" class="control-label"></label>
+                <input asp-for="SzuletesiIdo" class="form-control" />
+                <span asp-validation-for="SzuletesiIdo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegisztracioIdeje" class="control-label"></label>
+                <input asp-for="RegisztracioIdeje" class="form-control" />
+                <span asp-validation-for="RegisztracioIdeje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nem" class="control-label"></label>
+                <input asp-for="Nem" class="form-control" />
+                <span asp-validation-for="Nem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VezetekNev" class="control-label"></label>
+                <input asp-for="VezetekNev" class="form-control" />
+                <span asp-validation-for="VezetekNev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KeresztNev" class="control-label"></label>
+                <input asp-for="KeresztNev" class="form-control" />
+                <span asp-validation-for="KeresztNev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailCim" class="control-label"></label>
+                <input asp-for="EmailCim" class="form-control" />
+                <span asp-validation-for="EmailCim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
