@@ -15,7 +15,8 @@ namespace EFVersenyDataAccessTest.DataAccess
         }
 
         public DbSet<Profil> Profilok { get; set; }
-
+        public DbSet<JatekosNev> JatekosNevek { get; set; }
+        public DbSet<Jatek> Jatekok { get; set; }
 
 
     }

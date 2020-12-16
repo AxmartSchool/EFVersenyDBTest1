@@ -26,6 +26,7 @@ namespace EFVersenyDataAccessTest.Models
         [Required]
         [MaxLength(50)]
         public String EmailCim { get; set; }
+        public List<JatekosNev> JatekosNevek { get; set; }
 
 
 
