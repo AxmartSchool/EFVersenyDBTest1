@@ -61,6 +61,15 @@
                 @nev.Nev
             </dd>
         }
+        @foreach (var verseny in (List<string>)ViewData["versenyek"])
+        {
+            <dt class="col-sm-2">
+                Versenyben
+            </dt>
+            <dd class="col-sm-10">
+                @verseny
+            </dd>
+        }
     </dl>
 </div>
 <div>

@@ -42,6 +42,8 @@ namespace EFVersenyDBTest1.Views
 
             //profil.JatekosNevek = _context.Profilok.FirstOrDefault(x=>x.Id==id).JatekosNevek;
             profil.JatekosNevek = _context.JatekosNevek.Where(x => x.Profil == profil).ToList();
+            var resztvesz = _context.Resztvevok.Where(x => x.ProfilId == id);
+            ViewData["versenyek"] = resztvesz.Select(x => x.Verseny.Nev).ToList();
 
             return View(profil);
         }
