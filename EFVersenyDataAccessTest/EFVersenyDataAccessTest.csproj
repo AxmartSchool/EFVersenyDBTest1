@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20201216202910_JatekokEsJatekosNevek.cs" />
     <Compile Remove="Migrations\20201216202910_JatekokEsJatekosNevek.Designer.cs" />
+    <Compile Remove="Migrations\20201217205440_VersenyAndResztvevo.cs" />
+    <Compile Remove="Migrations\20201217205440_VersenyAndResztvevo.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

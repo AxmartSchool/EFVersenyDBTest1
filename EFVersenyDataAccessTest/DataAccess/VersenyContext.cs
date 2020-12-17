@@ -14,9 +14,20 @@ namespace EFVersenyDataAccessTest.DataAccess
 
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+
+            builder.Entity<Resztvevo>().HasKey(x => new { x.ProfilId, x.VersenyId });
+
+
+        }
+
+
         public DbSet<Profil> Profilok { get; set; }
         public DbSet<JatekosNev> JatekosNevek { get; set; }
         public DbSet<Jatek> Jatekok { get; set; }
+        public DbSet<Verseny> Versenyek { get; set; }
+        public DbSet<Resztvevo> Resztvevok { get; set; }
 
 
     }

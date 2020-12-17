@@ -13,7 +13,7 @@ namespace EFVersenyDataAccessTest.Models
         [MaxLength(20)]
         public String ProfilNev { get; set; }
         //Javitani valo az Initial migrationben
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public DateTime SzuletesiIdo { get; set; }
         public DateTime RegisztracioIdeje { get; set; }
         [Required]
