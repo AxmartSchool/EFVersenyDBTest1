@@ -25,6 +25,7 @@ namespace EFVersenyDataAccessTest.Models
         [Required]
         public Jatek Jatek { get; set; }
         public List<Resztvevo> Resztvevok { get; set; }
+        public List<Meccs> Meccsek { get; set; }
 
 
 

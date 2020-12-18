@@ -28,6 +28,7 @@ namespace EFVersenyDataAccessTest.DataAccess
         public DbSet<Jatek> Jatekok { get; set; }
         public DbSet<Verseny> Versenyek { get; set; }
         public DbSet<Resztvevo> Resztvevok { get; set; }
+        public DbSet<Meccs> Meccsek { get; set; }
 
 
     }

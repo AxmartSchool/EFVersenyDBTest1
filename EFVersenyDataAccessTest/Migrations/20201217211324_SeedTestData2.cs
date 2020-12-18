@@ -38,6 +38,9 @@ namespace EFVersenyDataAccessTest.Migrations
             migrationBuilder.Sql(@"DELETE FROM resztvevok WHERE ProfilId=3 AND VersenyId=3;");
             migrationBuilder.Sql(@"DELETE FROM resztvevok WHERE ProfilId=4 AND VersenyId=3;");
 
+            migrationBuilder.Sql(@"ALTER TABLE versenyek AUTO_INCREMENT = 1;");
+            migrationBuilder.Sql(@"ALTER TABLE resztvevok AUTO_INCREMENT = 1;");
+           
 
         }
     }
