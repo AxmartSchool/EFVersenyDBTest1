@@ -1,0 +1,60 @@
+﻿@model EFVersenyDataAccessTest.Models.Verseny
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Verseny</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.KezdesIdeje)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.KezdesIdeje)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nev)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nev)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Szabalyzat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Szabalyzat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JatekMod)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JatekMod)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Statusz)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Statusz)
+        </dd>
+        @foreach (var resztvevo in (List<EFVersenyDataAccessTest.Models.Profil>)ViewData["resztvevok"])
+        {
+
+
+        <dt class="col-sm-2">
+            Jatekosok
+        </dt>
+        <dd class="col-sm-10">
+            @resztvevo.ProfilNev
+        </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-action="Meccsek" asp-route-id="@Model.Id">Meccsek</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
